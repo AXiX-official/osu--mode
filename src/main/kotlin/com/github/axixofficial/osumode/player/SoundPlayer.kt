@@ -21,7 +21,7 @@ object SoundPlayer {
     }
 
     fun playRandom() {
-        val randomSound = "(${(1..5).random()}).wav"
+        val randomSound = "${(1..5).random()}.wav"
         play(randomSound)
     }
 }
