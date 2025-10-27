@@ -6,10 +6,12 @@
 
     <depends>com.intellij.modules.platform</depends>
 
-    <resource-bundle>messages.MyBundle</resource-bundle>
+
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.axixofficial.osumode.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
-        <postStartupActivity implementation="com.github.axixofficial.osumode.startup.MyProjectActivity" />
+        <postStartupActivity implementation="com.github.axixofficial.osumode.startup.WelcomeSoundActivity" />
+        <projectManagerListener implementation="com.github.axixofficial.osumode.listeners.ShutdownListener" />
+        <editorFactoryListener implementation="com.github.axixofficial.osumode.listeners.OsuEditorListener"/>
+
     </extensions>
 </idea-plugin>
